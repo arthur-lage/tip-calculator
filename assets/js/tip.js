@@ -1,5 +1,9 @@
 const calculateButton = document.querySelector("#calculate-button");
+
 const tipText = document.querySelector("#tip-text");
+
+const tipSection = document.querySelector(".tip-section");
+const tipContainer = document.querySelector("#tip-container");
 
 const billAmountInput = document.querySelector("#bill-amount");
 const serviceQualityOption = document.querySelector("#service-quality-select");
@@ -31,6 +35,9 @@ calculateButton.addEventListener("click", (event) => {
 
   tipValue = Number(tipValue);
   tipValue = tipValue.toFixed(2);
+
+  tipSection.classList.remove("hidden");
+  tipContainer.classList.add("go-left-animation");
 
   tipText.innerHTML = `The tip value is: $${tipValue}`;
 });
