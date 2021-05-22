@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="tip-container">
+        <h1 id="logo">Tip Calculator</h1>
+        <form id="tip-form">
+          <div class="input-block">
+            <label for="bill-amount">How much is the bill: </label>
+            <br />
+            <input
+              type="number"
+              min="1"
+              required
+              placeholder="$ Bill Amount"
+              id="bill-amount"
+              name="bill-amount"
+            />
+          </div>
+          <div class="input-block">
+            <label for="service-quality-select"
+              >How was the service quality:
+            </label>
+            <br />
+            <select
+              name="service-quality-select"
+              required
+              id="service-quality-select"
+            >
+              <option value="" disabled selected>Select an option</option>
+              <option value="terrible">5% - Terrible</option>
+              <option value="bad">10% - Bad</option>
+              <option value="ok">15% - It was OK</option>
+              <option value="good">20% - Good</option>
+              <option value="outstanding">30% - Outstanding</option>
+            </select>
+          </div>
+          <div class="input-block">
+            <label for="people-to-pay"
+              >How many people are sharing the bill:
+            </label>
+            <br />
+            <input
+              type="number"
+              min="1"
+              value="1"
+              placeholder="Number of People"
+              id="people-to-pay"
+              name="people-to-pay"
+            />
+            people.
+          </div>
+          <div class="calculate-button-div">
+            <button id="calculate-button">Calculate</button>
+          </div>
+        </form>
+      </section>
+      <p id="tip-text"></p>
+    </main>
+    <script src="tip.js"></script>
+    <script src="animation.js"></script>
+  </body>
+</html>
